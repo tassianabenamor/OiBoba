@@ -1,0 +1,62 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.full-width-image {
+    width: 100%; /* faz a imagem esticar para cobrir a largura total do contêiner */
+    height: auto; /* mantém a proporção da imagem */
+    object-fit: cover; /* corta a imagem para preencher o elemento contêiner */
+}
+
+a .navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #FEEDCE;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Adicionado para garantir que o footer comece do canto esquerdo */
+    width: 100%;
+    line-height: 60px; /* Altura do seu footer, ajuste conforme necessário */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    background: #f8f9fa; /* Exemplo de cor de fundo, ajuste conforme necessário */
+}
+
+body {
+    position: relative; /* Isso ajuda a posicionar o footer absolutamente em relação ao body */
+    padding-bottom: 60px; /* Isso deve ser pelo menos a altura do seu footer */
+}
+
