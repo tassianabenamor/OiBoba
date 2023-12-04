@@ -1,0 +1,76 @@
+﻿@page
+@model OiBobaLoja.Pages.Shared.CreateModel
+
+<div class="row pt-5">
+    <div class="col-md-4">
+        <form method="post">
+            <h4>Inclusão de Print</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Print.Nome" class="control-label"></label>
+                <input asp-for="Print.Nome" class="form-control" />
+                <span asp-validation-for="Print.Nome" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Print.Descricao" class="control-label"></label>
+                <input asp-for="Print.Descricao" class="form-control" />
+                <span asp-validation-for="Print.Descricao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">FileName
+                <label asp-for="Print.ImagemUri" class="control-label"></label>
+                <input asp-for="Print.ImagemUri" class="form-control" />
+                <span asp-validation-for="Print.ImagemUri" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Print.Preco" class="control-label"></label>
+                <input asp-for="Print.Preco" class="form-control" />
+                <span asp-validation-for="Print.Preco" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3 mb-3">
+                <input class="form-check-input" asp-for="Print.EntregaExpressa" />
+                <label asp-for="Print.EntregaExpressa"></label>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Print.DataCadastro" class="control-label"></label>
+                <input asp-for="Print.DataCadastro" class="form-control" />
+                <span asp-validation-for="Print.DataCadastro" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3 mb-3">
+                <label asp-for="Print.MarcaId" class="control-label"></label>
+                <select class="form-select" asp-for="Print.MarcaId"
+                        asp-items="Model.MarcaOptionItems">
+                    <option value="">Selecione uma opção</option>
+                </select>
+                <span asp-validation-for="Print.MarcaId" class="text-danger">
+                </span>
+            </div>
+
+            <div class="form-group mt-3 mb-3">
+                <label asp-for="Print.Categorias" class="control-label"></label>
+                <select class="form-select" asp-for="CategoriaIds"
+                        asp-items="Model.CategoriaOptionItems">
+                </select>
+                <span asp-validation-for="Print.Categorias" class="text-danger">
+                </span>
+            </div>
+
+            <div class="form-group mt-4">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
